@@ -1,0 +1,322 @@
+/* Contenedor pricipal */
+.detail-page {
+  min-height: 100vh;
+  background-image: url("../assets/fondo-formato-bueno.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 80px 20px 40px;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+/*Flecha para volver atras*/
+.back-button {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  z-index: 1000; 
+  transition: transform 0.2s;
+}
+.back-button:hover {
+  transform: scale(1.2);
+}
+
+/*Contenedor de la pagina*/
+.detail {
+  display: flex;
+  align-items: top;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-right: 20px;
+  justify-content: space-between;
+}
+
+/*Datos de cada serie/pelicula*/
+.detail-info {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 20px;
+  border-radius: 12px;
+}
+.detail-info h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.detail-data {
+  display: flex;
+  flex-direction: row;
+}
+.detail-row1{
+  margin-right:80px;
+}
+
+/*Imagen de la serie/pelicula*/
+.detail-banner-image {
+  width: 720px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-left: 50px;
+}
+
+/*Botones de acciones de la serie/pelicula*/
+.detail-buttons{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+/*Boton de reproducir*/
+.detail-btn-play {
+  background: linear-gradient(90deg, #a23fd0, #c35ff5);
+  color: #fff;
+  border: none;
+  width: 50%;
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.detail-btn-soon {
+  background: linear-gradient(90deg, #a23fd0, #c35ff5);
+  color: #fff;
+  border: none;
+  width: 50%;
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+/*Iconos*/
+.detail-images{
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+}
+.detail-images button{
+  background: none;
+  border: none;
+  height: 100%;
+}
+.detail-images img{
+  cursor: pointer;
+  height: 40px;
+  margin-right: 20px;
+}
+.detail-like-image.active {
+  filter: hue-rotate(0deg) saturate(5) brightness(0.8);
+}
+.detail-star-image.active {
+  filter: hue-rotate(0deg) saturate(5) brightness(0.8);
+}
+
+/* Select de temporadas */
+.detailSerie-view-seasons{
+  margin-top: 50px;
+}
+
+/* Estilos para acciones de las temporadas */
+.detailSerie-admin-actions {
+  margin-top: 30px;
+  border-radius: 8px;
+}
+.detailSerie-seasons{
+  display:flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.detailSerie-new-season, .detailSerie-select-seasons, .detailSerie-btn-edit-season{
+  background: linear-gradient(90deg, #a23fd0, #c35ff5);
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.detailSerie-select-seasons option {
+  background-color: #000000; 
+  color: white;
+}
+
+/* Contenedor de la temporada */
+.carousel-fullscreen {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: 20px;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+/* Formulario de editar la temporada */
+.detailSerie-edit-season-form {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+.detailSerie-edit-season-form h3 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Frmulario de editar el capitulo  */
+.detailSerie-chapter-edit {
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+}
+.detailSerie-chapter-edit label {
+  display: block;
+  margin: 10px 0 6px;
+  color: #ddd;
+  font-weight: bold;
+}
+.detailSerie-chapter-edit input {
+  width: 92%;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(70, 70, 160, 0.8);
+  color: white;
+  font-size: 1rem;
+}
+.detailSerie-chapter-edit-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
+.detailSerie-edit-season-form button {
+  background: linear-gradient(90deg, #a23fd0, #c35ff5);
+  margin-top: 10px;
+  padding: 10px;
+  color: white;
+  border: none;
+  width: 40%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+/* Etiquetas en formularios de edición */
+.detail-label-edit {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: white;
+  font-size: 0.95rem;
+}
+.detail-label-edit:first-of-type {
+  margin-top: 0;
+}
+
+/*Inputs y textarea del formulario de editar serie*/
+.detail-info form input, .detail-info form textarea {
+  width: 92%;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(70, 70, 160, 0.8);
+  color: white;
+  font-size: 1rem;
+}
+.detail-info form input:focus, .detail-info form textarea:focus {
+  background-color: #c35ff5;
+  outline: none;
+}
+.detail-info form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* Botones de guardar y cancelar del editar serie */
+.detail-btns{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.detail-btn-edit {
+  background: linear-gradient(90deg, #a23fd0, #c35ff5);
+  margin-top: 10px;
+  padding: 10px;
+  color: white;
+  border: none;
+  width: 40%;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.detail-btn-edit:hover {
+  background: linear-gradient(90deg, #c35ff5, #e480ff);
+}
+
+/* Formulario de añadir temporada */
+.detailSerie-admin-form{
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+.detailSerie-chapter-form:not(:first-of-type){
+  padding-top: 20px;
+}
+.detailSerie-admin-form button {
+  background: linear-gradient(90deg, #a23fd0, #c35ff5);
+  margin-top: 10px;
+  padding: 10px;
+  color: white;
+  border: none;
+  width: 40%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Mensaje del formulario */
+.form-message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: rgba(76, 175, 80, 0.2);
+  color: #4CAF50;
+}
+
+/* para mensajes de error */ 
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+/* Estilo de las flechas en el input number */
+.detail-info input[type="number"]::-webkit-inner-spin-button, .detail-info input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+/*Quitar scroll*/
+html, body {
+  height: 100%;
+  overflow-y: scroll;    
+  scrollbar-width: none;    
+}
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;         
+}

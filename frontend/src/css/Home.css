@@ -1,0 +1,290 @@
+/* Contenedor principal */
+.home-container {
+  min-height: 100vh;
+  background-image: url("../assets/fondo-formato-bueno.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 80px 20px 40px;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+/* Menú superior */
+.top-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(30, 30, 60, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 12px 20px;
+  z-index: 1000;
+}
+
+/* Contenedor izquierdo */
+.menu-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Contenedor central */
+.menu-center {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0 auto; 
+}
+
+/* Contenedor derecho */
+.menu-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;   
+  padding-right: 50px;        
+  box-sizing: border-box;
+}
+
+/* Imagen de settings */
+.settings {
+  height: 30px;               
+  object-fit: contain;        
+  cursor: pointer;
+}
+
+/*Desplegable*/
+.dropdown-settings {
+  position: absolute;
+  background: rgba(30, 30, 60, 0.85);
+  margin-top: 180px;
+  padding: 0;
+}
+
+.dropdown-create{
+  position: absolute;
+  background: rgba(30, 30, 60, 0.85);
+  margin-top: 120px;
+  padding: 0;
+}
+
+.dropdown-settings ul, .dropdown-create ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-settings li, .dropdown-create li {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 1px solid #c35ff5;
+}
+
+.dropdown-settings li:hover, .dropdown-create li:hover {
+  background-color: rgba(82, 82, 138, 0.85);
+}
+
+/*Volver atrás*/
+.back-point {
+  cursor: pointer;
+}
+
+/* Botón + para admin */
+.add-button {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background-color: #c35ff5;
+  font-size: 20px;
+  padding-bottom: 5px;
+  border: none;
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+}
+
+/* Icono de perfil */
+.profile-icon{
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background-color: #c35ff5;
+  font-weight: 700;
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.18);
+}
+.user-icon {
+  width: 27px;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Botones del menú central */
+.top-menu .menu-center button{
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: color 0.2s ease;
+}
+
+/* Hover solo desde el segundo botón */
+.top-menu .menu-center button:hover {
+  color: #c35ff5;
+}
+
+/* Buscador */
+.search-input {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  background-color: #c35ff5;
+  color: white;
+  outline: none;
+}
+.search-input::placeholder {
+  color: #d0d0ff;
+}
+
+/* Título principal */
+.home-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section h2:first-of-type{
+  font-size: 40px;
+}
+
+/* Tarjetas de contenido */
+.featured-banner {
+  position: relative;
+  width: 100%;
+  margin: 0 auto 30px;
+  border-radius: 12px;
+  border: 1px solid white;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.featured-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.featured-label {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: #6c3fa9;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 24%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/*Tarjetas en favoritos y like*/
+.favorites-likes {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 1rem;
+  flex-wrap: wrap; 
+  gap: 22px; 
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 140px;      
+  height: 210px;      
+  border-radius: 10px;
+  border: 1px solid white;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/*Tarjetas de generos*/
+.genre-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.genre-button {
+  background-color: #c35ff559; 
+  color: white;
+  border: none;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  width: 100%; 
+  height: 80px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+.genre-button:hover {
+  transform: scale(1.05);
+}
+
+/* Ocultar scrollbar en navegadores modernos */
+.carousel {
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; 
+}
+
+/*Quitar scroll*/
+html, body {
+  height: 100%;
+  overflow-y: scroll;    
+  scrollbar-width: none;    
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;         
+}
+
+.genre-button.active {
+  background-color: #7511a859;
+  color: white;
+}

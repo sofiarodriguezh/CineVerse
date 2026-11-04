@@ -1,0 +1,126 @@
+/*Contenedor principal*/
+.add-container {
+  min-height: 100vh;    
+  background-image: url("../assets/fondo-formato-bueno.png");               
+  background-size: cover;       
+  background-position: center;
+  background-attachment: fixed; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  color: white;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*Flecha para volver atrás*/
+.back-button {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  z-index: 1000; 
+  transition: transform 0.2s;
+}
+.back-button:hover {
+  transform: scale(1.2);
+}
+
+/*Título*/
+.add-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/*Contenedor de formulario*/
+.add-form {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  gap: 20px;;
+  max-width: 500px;
+  background-color: rgba(180, 180, 180, 0.178); 
+  padding: 25px;
+  border-radius: 12px;
+}
+
+/*Inputs y textarea*/
+.add-form input, .add-form textarea {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(70, 70, 160, 0.8);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  resize: none;
+}
+.add-form input::placeholder, .add-form textarea::placeholder {
+  color: #d0d0ff;
+}
+
+/* Estilo de las flechas en el input number */
+.add-form input[type="number"]::-webkit-inner-spin-button, .add-form input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+/* Selector de tipo (película/serie) */
+.add-type-selector {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 1rem;
+}
+.add-type-selector label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.add-type-selector input[type="radio"] {
+  accent-color: #c35ff5; 
+  transform: scale(1.2);
+}
+
+/*Botón de guardar*/
+.add-continue-btn {
+  margin-top: 10px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #a23fd0, #c35ff5);
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.add-continue-btn:hover {
+  background: linear-gradient(90deg, #c35ff5, #e480ff);
+}
+
+/*Mensaje de error*/
+.field-error {
+  color: #d32f2f;       
+  font-size: 0.85rem;  
+  margin-bottom: 5px;    
+}
+
+/*Quitar scroll*/
+html, body {
+  height: 100%;
+  overflow-y: scroll;    
+  scrollbar-width: none;    
+}
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;         
+}
