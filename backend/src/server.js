@@ -1403,10 +1403,9 @@ const frontendBuildPath = path.join(__dirname, '../../frontend/dist');
 
 app.use(express.static(frontendBuildPath));
 
-app.get('*', (req, res) => {
+app.get('/{*splat}', (req, res) => {
     res.sendFile(path.join(frontendBuildPath, 'index.html'));
 });
-
 
 // ------------------------------------------------------------- ARRANCAR SERVIDOR -----------------------------------------------------------
 const PORT = process.env.PORT || 3001;
