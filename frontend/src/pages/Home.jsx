@@ -221,7 +221,7 @@ export default function Home({ view: initialView = "inicio" }) {
       {view === "inicio" && (
         <>
           <div className="featured-banner">
-            <img src="/images-series/lidia_poet2.jpg" alt="La Ley de Lidia Poët" className="featured-image"/>
+            <img src="/images-series/lqsa2.jpg" alt="La que se avecina" className="featured-image"/>
             <div className="featured-label">NUEVO ESTRENO</div>
           </div>
 
