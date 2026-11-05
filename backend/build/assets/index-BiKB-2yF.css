@@ -576,9 +576,9 @@ html, body, #root {
 
 .featured-image {
     width: 100%;
-    height: auto;
+    height: 15cm;
     object-fit: cover;
-    display: block
+    display: block;
 }
 
 .featured-label {
